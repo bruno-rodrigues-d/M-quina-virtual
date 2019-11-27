@@ -39,7 +39,7 @@ def decode(self, instr):
 	  instr_type = instr >> 24
     
 
-    # ADD
+    # Sub
     if instr_type == 0x00:
         print("")
 
@@ -68,10 +68,10 @@ def decode(self, instr):
 
 def execute(instr_type):
 	  
-	# ADD
+	# Sub
 	if instr_type == 0x00:
-			reg[reg_dest] = reg[reg_a] + reg[reg_b]
-			print("Add: " + reg[reg_dest])
+			reg[reg_dest] = reg[reg_a] - reg[reg_b]
+			print("sub: " + reg[reg_dest])
 			
 	# LOAD
 	elif instr_type == 0x01:
